@@ -1,0 +1,11 @@
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.exe
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.deps.json
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.runtimeconfig.json
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.runtimeconfig.dev.json
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.dll
+C:\Users\torir\source\repos\AdventofCodeDay2\bin\Debug\netcoreapp3.0\AdventofCodeDay2.pdb
+C:\Users\torir\source\repos\AdventofCodeDay2\obj\Debug\netcoreapp3.0\AdventofCodeDay2.csprojAssemblyReference.cache
+C:\Users\torir\source\repos\AdventofCodeDay2\obj\Debug\netcoreapp3.0\AdventofCodeDay2.AssemblyInfoInputs.cache
+C:\Users\torir\source\repos\AdventofCodeDay2\obj\Debug\netcoreapp3.0\AdventofCodeDay2.AssemblyInfo.cs
+C:\Users\torir\source\repos\AdventofCodeDay2\obj\Debug\netcoreapp3.0\AdventofCodeDay2.dll
+C:\Users\torir\source\repos\AdventofCodeDay2\obj\Debug\netcoreapp3.0\AdventofCodeDay2.pdb
