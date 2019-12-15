@@ -1,0 +1,3 @@
+﻿SELECT * FROM Events
+
+SELECT * FROM RSVP

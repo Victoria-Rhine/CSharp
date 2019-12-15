@@ -1,0 +1,74 @@
+﻿@model TheFinalBattle.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+</div>
+
+<p><h4>Get current number of RSVPS for this event</h4></p>
+<button onclick="myFunction('@Html.DisplayFor(model => model.Title)')">Click me!</button>
+<br />
+<br />
+
+@*This is a list handled by Ajax call*@
+<div>
+    <ul id="titleList"></ul>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section scripts
+{
+    <script src="~/Scripts/main.js"></script>
+}
