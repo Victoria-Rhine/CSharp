@@ -1,0 +1,62 @@
+﻿@model  IEnumerable<SportsSite.Models.ViewModels.GraphModel>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GraphResults</title>
+</head>
+<body>
+    <h2>See Graph Results</h2><hr />
+<div class="row">
+    <div class="col-md-12">
+        @Html.ActionLink("Back to Homepage", "Index", "Home", null, new { @class = "myButton" })
+        @Html.ActionLink("Change Team", "Create", "Graph", null, new { @class = "myButton" })
+        <input id="request" name="request" type="button" value="Generate Graph" class="myButton" />
+        <input id="refresh" name="refresh" type="button" value="Reset" class="myButton" />
+    </div>
+</div>
+
+<div class="row">
+
+<div class="col-md-2">
+    <table class="table" id="t01">
+    <tr><th>Athlete</th><th></th></tr>
+    @foreach (var item in ViewBag.Athletes)
+    {
+    <tr>
+    <td>@Html.DisplayFor(modelItem => item)</td>
+    <td><input id="athlete" type="radio" value="@item"></td>
+    </tr>
+    }
+    </table>
+</div>
+
+<div class="col-md-1">
+    <table class="table" id="t01">
+    <tr><th>Event</th><th></th></tr>
+    @foreach (var item in ViewBag.Events)
+    {
+    <tr>
+    <td>@Html.DisplayFor(modelItem => item)</td>
+    <td><input id="event" type="radio" value="@item"></td>
+    </tr>
+    }
+    </table>
+</div>
+
+<div class="col-md-9">
+    <div id="plot"></div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+@section scripts
+{
+    <script src="~/Scripts/main.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+} 

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Linking to custom CSS !-->
+    <link rel="stylesheet" href="style.css">
+    <title>Ulimate GoT Site</title>
+  </head>
+  <body>
+  	<div class="container">
+	  <div class="row">
+        <!-- First row !-->
+	    <div class="col-2 col-md-2"><img src="pics/dragon.png" class="img-fluid"></div>	
+	    <div class="col-8 col-md-8"><img src="pics/EC.jpg" id="header_image" class="img-fluid"></div>	  
+	    <div class="col-2 col-md-2"><img src="pics/dragon.png" class="img-fluid"></div>	
+
+	    <!-- Second row !-->
+	    <div class="col-2 col-md-2"></div>	
+	    <div class="col-4 col-md-4">	  
+	      <h5 id="front_page"><br>Play Intro<br></h5>    		    	    
+		    <audio id="player" controls autoplay>
+	         <source src="pics/Game of Thrones.mp3">
+	        </audio>
+	    </div>	 
+	   <!-- Form to take user input, required fields and restrictions !-->
+	    <div class="col-4 col-md-4">
+	    	<h5 id="front_page">
+	    		<!-- Button takes user input and passes to function !-->
+				<div class="fb-button form-group field-sub_btn">
+					<button onclick = "generateCharacter(document.getElementById('name_field').value, document.getElementById('age_field').value, document.getElementById('number_field').value)" value type="submit" class="myButton" name="sub_btn" style="default" id="sub_btn">generate your own character</button>
+				</div>
+				<form id="form">
+					<input type="text" placeholder="Name" class="form-control" name="name_field" maxlength="30" id="name_field" required="required" aria-required="true" onfocus="formColor(this)">
+					<input type="number" placeholder="Age" class="form-control" name="age_field" min="0" max="100" id="age_field" required="required" aria-required="true" onfocus="formColor(this)">
+					<input type="number" placeholder="1-100" class="form-control" name="number_field" min="0" max="100" id="number_field" required="required" aria-required="true" onfocus="formColor(this)">
+				</form><br><br><br>
+	    </div>
+	    <div class="col-2 col-md-2"></div>	
+	    <!-- Rest of the rows with clickable images that unhide dynamically populated table !-->
+	    <div class="col-6 col-md-3"><h5 id="front_page">Click on any character</h5></div>
+	    
+	    <div class="col-6 col-md-3">   	
+	      <div class="btn1"><div id="hidediv1"><img src="pics/Missandei.jpg" class="rounded-circle img-fluid">
+	    </div></div>
+	    <div id="showingdiv1">
+			<a href="javascript:void(0);" onclick="InsertElements('Missandei');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Missandei</th></tr>
+		        </thead>
+		           <tbody id="tbody1"></tbody>
+		    </table>
+		 </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn2"><div id="hidediv2"><img src="pics/Arya.jpg" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv2">
+			<a href="javascript:void(0);" onclick="InsertElements('Arya');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Arya Stark</th></tr>
+		        </thead>
+		        <tbody id="tbody2"></tbody>
+		    </table>
+	      </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn3"><div id="hidediv3"><img src="pics/Tyrion.jpg" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv3">
+			<a href="javascript:void(0);" onclick="InsertElements('Tyrion');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Tyrion Lannister</th></tr>
+		        </thead>
+		        <tbody id="tbody3"></tbody>
+		    </table>
+	      </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn4"><div id="hidediv4"><img src="pics/Dany.jpg" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv4">
+			<a href="javascript:void(0);" onclick="InsertElements('Dany');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Daenerys Targaryan</th></tr>
+		        </thead>
+		        <tbody id="tbody4"></tbody>
+		    </table>
+		   </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn5"><div id="hidediv5"><img src="pics/Jorah.jpg" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv5">
+			<a href="javascript:void(0);" onclick="InsertElements('Jorah');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Jorah Mormont</th></tr>
+		        </thead>
+		        <tbody id="tbody5"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	    <!-- DOM event to reveal answer !-->
+	    <div class="col-6 col-md-3">
+	      <q>When the snows fall and the white winds blow, the lone wolf dies but the pack survives.</q>
+	      <h6><br>Who said it?</h6>
+	      <button onclick="getAnswer()" class="myButton">Click here to find out.</button>
+	      <p id="answer"></p>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn6"><div id="hidediv6"><img src="pics/Sansa.png" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv6"><p><br>
+			<a href="javascript:void(0);" onclick="InsertElements('Sansa');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Sansa Stark</th></tr>
+		        </thead>
+		        <tbody id="tbody6"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn7"><div id="hidediv7"><img src="pics/Cersei.jpg" class="rounded-circle img-fluid">
+	      </div></div>
+	      <div id="showingdiv7">
+			<a href="javascript:void(0);" onclick="InsertElements('Cersei');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Cersei Lannister</th></tr>
+		        </thead>
+		        <tbody id="tbody7"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn8"><div id="hidediv8"><img src="pics/Jaime.jpg" class="rounded-circle img-fluid"></div></div>
+	      <div id="showingdiv8">
+			<a href="javascript:void(0);" onclick="InsertElements('Jaime');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Jaime Lannister</th></tr>
+		        </thead>
+		        <tbody id="tbody8"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn9"><div id="hidediv9"><img src="pics/Jon.jpg" class="rounded-circle img-fluid"></div></div>
+	      <div id="showingdiv9">
+			<a href="javascript:void(0);" onclick="InsertElements('Jon');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Jon Snow/Aegon Targaryen</th></tr>
+		        </thead>
+		        <tbody id="tbody9"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	    <div class="col-6 col-md-3">    	
+	      <div class="btn10"><div id="hidediv10"><img src="pics/Brienne.jpg" class="rounded-circle img-fluid"></div></div>
+	      <div id="showingdiv10"><p><br>
+			<a href="javascript:void(0);" onclick="InsertElements('Brienne');">Click to read more &#8594;</a><br>
+			<a href="">&#8592; Go back</a>
+		    <table>
+		        <thead>
+		            <tr><th>Brienne of Tarth</th></tr>
+		        </thead>
+		        <tbody id="tbody10"></tbody>
+		    </table>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Connecting Javascript and jQuery, Do not write below this line !-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <script src="hw2.js"></script>
+  </body>
+</html>

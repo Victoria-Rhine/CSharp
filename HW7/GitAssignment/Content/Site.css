@@ -1,0 +1,79 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Roboto Slab;
+    font-size: 15px;
+    color: aliceblue;
+    background-image: linear-gradient(#ad5389, #3c1053);
+}
+
+.jumbotron {
+    background-color: #6d6565;
+    border-color: indigo;
+    border-width: 4px;
+    border-style: dotted; 
+    padding-top: 15px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div.solid {
+    border-style: solid;
+    border-width: 2px;
+    border-color: indigo;
+    background-color: #6d6565;
+    text-align: center;
+    margin: 4px;
+}
+
+/* unvisited link */
+a:link {
+    color: aliceblue;
+}
+
+/* visited link */
+a:visited {
+    color: aliceblue;
+}
+
+/* mouse over link */
+a:hover {
+    color: #b44d98;
+}
+
+/* selected link */
+a:active {
+    color: #b44d98;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-style: outset;
+}
+
+    .button1:hover {
+        background-color: #ad5389;
+        color: white;
+    }

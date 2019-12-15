@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SportsSite.Models.Result>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewResults</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-10">
+            @Html.ActionLink("Add Another Result", "Create", "Results", null, new { @class = "myButton" })
+            @Html.ActionLink("Back to Homepage", "Index", "Home", null, new { @class = "myButton" })
+            <table class="table" id="t01">
+                <tr>
+                    <th>Athlete</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Result</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Athlete.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Event.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LocationDetail.Place)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RaceTime)
+                        </td>
+                    </tr>
+                }
+            </table>
+            @Html.ActionLink("Add Another Result", "Create", "Results", null, new { @class = "myButton" })
+            @Html.ActionLink("Back to Homepage", "Index", "Home", null, new { @class = "myButton" })
+        </div>
+    </div>
+</body>
+</html>

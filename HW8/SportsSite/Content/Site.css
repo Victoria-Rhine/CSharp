@@ -1,0 +1,152 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body {
+    padding-top: 7px;
+    padding-bottom: 20px;
+    font-family: Roboto Slab;
+    font-size: 15px;
+    color: azure;
+    background-color: #007000;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.jumbotron {
+    background-image: url(https://www.worldsourcefinancial.com/files/live/sites/wfm-new/files/WFM_Public/images/banner5.jpg);
+    background-size: cover;
+}
+
+div {
+    text-align: center;
+}
+
+.col-md-12 {
+    margin: 5px;
+}
+
+.myButton {
+    box-shadow: inset 0px 1px 0px 0px #a6827e;
+    background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+    background-color: #7d5d3b;
+    border-radius: 3px;
+    border: 1px solid #54381e;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #4d3534;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+    .myButton:hover {
+        background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+        background-color: #634b30;
+        color: #808080;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+.myButton2 {
+    box-shadow: inset 0px 1px 0px 0px #a6827e;
+    background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+    background-color: #7d5d3b;
+    border-radius: 3px;
+    border: 1px solid #54381e;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #4d3534;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+    .myButton2:hover {
+        background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+        background-color: #634b30;
+        color: #808080;
+    }
+
+    .myButton2:active {
+        position: relative;
+        top: 1px;
+    }
+
+    .boxes {
+        background-color: darkslategray;
+    }
+
+/* unvisited link */
+a:link {
+    color: azure;
+}
+
+/* visited link */
+a:visited {
+    color: azure;
+}
+
+/* mouse over link */
+a:hover {
+    color: darkslategray;
+}
+
+/* selected link */
+a:active {
+    color: azure;
+}
+
+table {
+    width: 70%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #5c391a;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #603813;
+}
+
+table#t01 th {
+    background-color: #7d5d3b;
+    color: white;
+}

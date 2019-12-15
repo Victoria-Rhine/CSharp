@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Interpolator";
+}
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@model TheColorWebsite.Models.InterpolationModel
+
+<h2>&#10045; interpolate from one color to another &#10082;</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <ul style="list-style-type:none;">
+                    <li>@Html.Label("firstColor", "first color")</li>
+                    <li>
+                        @Html.TextBoxFor(m => m.firstColor)
+                        @Html.ValidationMessageFor(m => m.firstColor)
+                    </li>
+                    <li>@Html.Label("secondColor", "second color")</li>
+                    <li>
+                        @Html.TextBoxFor(m => m.secondColor)
+                        @Html.ValidationMessageFor(m => m.secondColor)
+                    </li>
+                    <li>@Html.Label("numColors", "number of colors")</li>
+                    <li>
+                        @Html.TextBoxFor(m => m.numColors)
+                        @Html.ValidationMessageFor(m => m.numColors)
+                    </li>
+                    <li><button type="submit" class="rgbButton">generate colors!</button></li>
+                </ul>
+            </div>
+        }
+    </div>
+
+    <div class="col-md-3">
+        @{
+            if (ViewBag.ListColors == null)
+            {
+                <div><img src="~/Content/Images/transparent.png" class="img-fluid" width="500" height="399" /> </div>
+            }
+            else
+            {
+                <h4>html values</h4>
+                foreach (var color in (IEnumerable<TheColorWebsite.Controllers.HomeController.EndColor>)ViewBag.ListColors)
+                {
+                    <ul style="list-style-type:none;">
+                        <li>@color.HTMLCol</li>
+                    </ul>
+                }
+            }
+        }
+    </div>
+
+    <div class="col-md-3">
+        @{
+            if (ViewBag.ListColors == null)
+            {
+                <div></div>
+            }
+            else
+            {
+                <h4>beautiful colors :)</h4>
+                foreach (var color in (IEnumerable<TheColorWebsite.Controllers.HomeController.EndColor>)ViewBag.ListColors)
+                {
+                    <div style="width: 200px;height:30px;border:0px; background-color: @color.HTMLCol;)"></div>
+                }
+            }
+        }
+    </div>
+
+</div>

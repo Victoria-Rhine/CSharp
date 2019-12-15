@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>CS 460 Homework 4</h2>
+    <p class="lead">
+        A couple forms and server-side logic -- learning the basics of GET, POST,
+        query strings, form data, and handling it all from an ASP.NET MVC 5 application.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>RGB Color</h2>
+        <p>
+            This application uses query strings to send form data to the server, which read them in
+            the Request object. It then performs the calculation and formats the result in a
+            view to return to you.
+        </p>
+        <p><a class="rgbButton" href="http://localhost:57225/Home/RGBColor">Yay let's go &#10153;</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Color Interpolation</h2>
+        <p>
+            Typical online color choosers are way too useful. We wanted something fun and completely useless.
+            This form POST's the data to the server and uses parameter binding to make it easy.
+        </p>
+        <p><a class="rgbButton" href="http://localhost:57225/Home/Interpolator">Yay sounds fun &#10153;</a></p>
+    </div>
+</div>

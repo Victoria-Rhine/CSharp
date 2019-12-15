@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "RGBColor";
+}
+
+@{
+    int redHex = Convert.ToInt32(Request["red"]);
+    int greenHex = Convert.ToInt32(Request["green"]);
+    int blueHex = Convert.ToInt32(Request["blue"]);
+    string hexValue = "#" + redHex.ToString("X2") + greenHex.ToString("X2") + blueHex.ToString("X2");
+    ViewBag.hex = hexValue;
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <h3>&#9884; Enter RGB Values</h3>
+        <h5>prepare to be amazed...</h5>
+        @using (Html.BeginForm("RGBColor", "Home", FormMethod.Get))
+        {
+            <div class="form-group">
+                @Html.Label("red", "Red Value")
+                @Html.TextBox("red", Request["red"], new { @class = "form-control", type = "number", min = "0", max = "255" })
+                @Html.Label("green", "Green Value")
+                @Html.TextBox("green", Request["green"], new { @class = "form-control", type = "number", min = "0", max = "255" })
+                @Html.Label("blue", "Blue Value")
+                @Html.TextBox("blue", Request["blue"], new { @class = "form-control", type = "number", min = "0", max = "255" })
+                <button type="submit" class="rgbButton">colorize me!</button>
+            </div>
+        }
+    </div>
+
+    <div class="col-md-5">
+        <h3>Results:</h3>
+        <div style="width: 200px;height:200px;border:2px solid #000; background-color: rgb(@Request["red"],@Request["green"],@Request["blue"])">
+        </div>
+        @ViewBag.hex
+    </div>
+    <div class="col-md-2"></div>
+</div>

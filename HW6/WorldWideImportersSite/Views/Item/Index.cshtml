@@ -1,0 +1,36 @@
+﻿@model List<WorldWideImportersSite.Models.StockItem>
+
+<div class="jumbotron">
+    <h2>World Wide Importers</h2>
+    <p class="lead">Your favorite place for all things</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4"><img src="~/Content/Images/frontpage2.png" class="img-fluid" width="250" height="250" /></div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("Index", "Item", FormMethod.Get))
+        {
+            @Html.TextBox("search")<input type="submit" value="Search" />
+        }
+        <table class="table-table-striped">
+            <tbody>
+                @if (Model.Count() == 0)
+                {
+                    <tr>No matches found</tr>
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        {
+                            <tr>
+                                <td>@Html.ActionLink(item.StockItemName, "Details", "Item", new { itemMatch = item.StockItemName }, htmlAttributes: null)</td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4"><img src="~/Content/Images/frontpage.png" class="img-fluid" width="200" height="244" /></div>
+</div>

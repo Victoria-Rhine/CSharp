@@ -1,0 +1,80 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body {
+    padding-top: 60px;
+    padding-bottom: 5px;
+    font-family: Roboto Slab;
+    font-size: 15px;
+    background-image: linear-gradient(#74ebd5, #acb6e5);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div {
+    padding: 3px;
+}
+
+/* unvisited link */
+a:link {
+    color: #000000;
+}
+
+/* visited link */
+a:visited {
+    color: #1e1c1c;
+}
+
+/* mouse over link */
+a:hover {
+    color: #144960;
+}
+
+/* selected link */
+a:active {
+    color: #144960;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #bfbfbf;
+}
+
+table#t01 th {
+    background-color: #0e0e0e;
+    color: white;
+}

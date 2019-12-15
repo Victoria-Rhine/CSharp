@@ -1,0 +1,30 @@
+﻿<div class="jumbotron">
+    <h1>Oregon Track & Field</h1>
+    <p class="lead">A resource for coaches </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/Content/Images/icons1.png" class="img-fluid" width="250" height="250" />
+        @Html.ActionLink("Add New Athlete", "Create", "Athletes", null, new { @class = "myButton" })
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/Images/icons2.png" class="img-fluid" width="252" height="250" />
+        @Html.ActionLink("Add Event Information", "Create", "LocationDetails", null, new { @class = "myButton" })
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/Images/icons3.png" class="img-fluid" width="250" height="250" />
+        @Html.ActionLink("Add Event Results", "Create", "Results", null, new { @class = "myButton" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <img src="~/Content/Images/icons4.png" class="img-fluid" width="245" height="250" />
+        @Html.ActionLink("View Individual Results", "Create", "IndResults", null, new { @class = "myButton" })
+    </div>
+    <div class="col-md-4">
+        <img src="~/Content/Images/icons5.png" class="img-fluid" width="292" height="250" />
+        @Html.ActionLink("Search Detailed Results", "Create", "Graph", null, new { @class = "myButton" })
+    </div>
+    <div class="col-md-2"></div>
+</div>

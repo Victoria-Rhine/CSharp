@@ -1,0 +1,95 @@
+﻿@model HomeworkTracker.Models.Homework
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-5"><h2>&#9999; Add Assignment Details</h2></div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"> </div>
+        <div class="col-md-4">
+            @Html.Label("Priority")
+
+            @Html.DropDownListFor(m => m.Priority, Enumerable.Range(1, 3).Select(i => new SelectListItem
+            { Text = i.ToString(), Value = i.ToString() }), "-Select-")
+
+            @Html.ValidationMessageFor(model => model.Priority, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            @Html.Label("Due Date", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextBoxFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            @Html.Label("Subject", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextBoxFor(model => model.Department, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Department, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            @Html.Label("Due Time", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextBoxFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            @Html.Label("Course Number", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextBoxFor(model => model.CourseID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-6">
+            @Html.Label("Assignment", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextBoxFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            @Html.Label("Additional Notes", htmlAttributes: new { @class = "control-label col-md-8" })
+            @Html.TextAreaFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

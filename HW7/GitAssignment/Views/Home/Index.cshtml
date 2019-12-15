@@ -1,0 +1,42 @@
+﻿@using GitAssignment.Controllers;
+@model List<Repos>
+
+@{ var result = (Person)ViewData["myPerson"];}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@result.avatar_url" class="img-rounded" width="250" height="250" />
+        </div>
+        <div class="col-lg-4">
+            <h2><a href="@result.html_url">@result.name</a></h2>
+            <h5>Username: @result.login</h5>
+            <h5>Email: @result.email</h5>
+            <h5>Company: @result.company</h5>
+            <h5>Location: @result.location</h5>
+        </div>
+    </div>
+</div>
+
+@foreach (var item in ViewData["myRepo"] as IEnumerable<GitAssignment.Controllers.Repos>)
+{
+    <div class="col-md-4">
+        <div class="solid">
+            <h5><a href="@item.html_url">@item.name</a></h5>
+            <h6>@item.owner.login</h6>
+            <h6>Last updated: @item.updated_at</h6>
+            <img src="@item.owner.avatar_url" class="img-fluid" width="50" height="50" /><br></br>
+            <button onclick="myFunction('@item.owner.login','@item.name')" class="button button1">commits</button><br><br />
+        </div>
+    </div>
+}
+
+<div id="commitsTable">
+    <table id="commitsTable2"></table>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/main.js"></script>
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+}
